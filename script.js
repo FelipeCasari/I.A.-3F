@@ -6,23 +6,48 @@ const caixaResultado = document.querySelector('.caixa-resultado');
 const perguntas = [ //serve para abrir lista de perguntas
     {//abre o objeto das perguntas
         enunciado: "Em sua opinião, a I.A. poderá ser mais bem aproveitada futuramente, ou será degradada?",
-        alternativas: ["Será bem aproveitada","Irá degradar-se"]
+        alternativas: [
+            {texto: "Será bem aproveitada",
+                afirmação: "Afirmação da alternativa 1"},
+
+            {texto: "Irá degradar-se",
+                afirmação: "Afirmação da alternativa 2"}]
     },
     {
         enunciado: "Você pensa que a I.A. desenvolverá pessoas ou fará elas regredirem?",
-        alternativas: ["Desenvolverá","Fará elas regredirem"]
+        alternativas: [
+            {texto: "Desenvolverá",
+                afirmação: "Afirmação da alternativa 1"},
+            {texto: "Fará elas regredirem",
+                afirmação: "Afirmação da alternativa 2"}]
     },
     {
         enunciado: "Você se vê usando a I.A. com grande frequência futuramente?",
-        alternativas: ["Sim, me vejo","Não, não me vejo"]
+        alternativas: [
+            {texto: "Sim, me vejo", 
+                afirmação: "Afirmação da alternativa 1"},
+            {texto: "Não, não me vejo",
+                afirmação: "Afirmação da alternativa 2"}]
     },
     {
         enunciado: "Existe maior probabilidade da I.A. ser universalmente utilizada ou utilizada apenas para processos específicos?",
-        alternativas: ["Maior probabilidade de ser universalizada","Maior probabilidade de ser utilizada em processos específicos"]
+        alternativas: [
+            {texto: "Maior probabilidade de ser universalizada", 
+                afirmação: "Afirmação da alternativa 1"},
+            {texto: "Maior probabilidade de ser utilizada em processos específicos",
+                afirmação: "Afirmação da alternativa 2"}]
     },
     {
         enunciado: "Você utiliza, utilizou ou utilizaria produções feitas inteiramente por I.A.?",
-        alternativas: ["Utilizei, mas não utilizei mais","Utilizei e utilizaria","Não utilizei e não utilizaria","Não utilizei, mas utilizaria"]
+        alternativas: [
+            {texto: "Utilizei, mas não utilizei mais",
+                afirmação: "Afirmação da alternativa 1"},
+            {texto: "Utilizei e utilizaria",
+                afirmação: "Afirmação da alternativa 2,"},
+            {texto: "Não utilizei e não utilizaria",
+                afirmação: "Afirmação da alternativa 3"},
+            {texto: "Não utilizei, mas utilizaria",
+                afirmação: "Afirmação da alternativa 4"}]
     },
     {
         enunciado: "Você tem conhecimento da abrangência onde a I.A. pode ser utilizada e/ou já teve conato com isso?",
