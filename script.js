@@ -2,23 +2,24 @@ const caixaPrincipal = document.querySelector('.caixa-principal');
 const caixaPerguntas = document.querySelector('.caixa-perguntas');
 const caixaAlternativas = document.querySelector('.caixa-alternativas');
 const caixaResultado = document.querySelector('.caixa-resultado');
+const textoResultado = document.querySelector('.texto-resultado');
 
 const perguntas = [     //serve para abrir lista de perguntas
     {//abre o objeto das perguntas
-        enunciado: "Em sua opinião, a I.A. poderá ser mais bem aproveitada futuramente, ou será degradada?",
+        enunciado: "Ponte flutuante/semi-flutuante ou floyd rose??",
         alternativas: [
-            {texto: "Será bem aproveitada",
+            {texto: "Com certeza flutuante (em outras palavras, sou uma pessoa normal)",
                 afirmação: "A I.A. poderá ser mais bem aproveitada."},
 
-            {texto: "Irá degradar-se",
+            {texto: "Floyd rose pra fingir que eu sei tocar igual o Stivie Vai",
                 afirmação: "A I.A. será degradada."}]
     },
     {
-        enunciado: "Você pensa que a I.A. desenvolverá pessoas ou fará elas regredirem?",
+        enunciado: "Teoria é inútil pra tocar guitarra?",
         alternativas: [
-            {texto: "Desenvolverá",
+            {texto: "Claramente",
                 afirmação: "A I.A. desevolverá pessoas."},
-            {texto: "Fará elas regredirem",
+            {texto: "Claramente",
                 afirmação: "A I.A. fará as pessoas regredirem."}]
     },
     {
@@ -51,7 +52,12 @@ const perguntas = [     //serve para abrir lista de perguntas
     },
     {
         enunciado: "Você tem conhecimento da abrangência onde a I.A. pode ser utilizada e/ou já teve conato com isso?",
-        alternativas: ["Sim","Não"]},
+        alternativas: [
+            {texto: "Sim",
+                afirmação: "Tenho conhecimento da abrangência onde a I.A. pode ser utilizada"},
+            {texto: "Não",
+                afirmação: "Não tenho conhecimento da abrangência onde a I.A. pode ser utilizada"}]
+    },
 ]
 
 let posicao = 0;
@@ -60,6 +66,8 @@ let historiaFinal = "";
 
 function mostraPergunta(){
     if (posicao >= perguntas.length){
+        mostraResultado();
+        return;
 
     }
     perguntaAtual = perguntas[posicao];
